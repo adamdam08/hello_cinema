@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="777.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.homeController">
+   <children>
+      <AnchorPane fx:id="welcome_page" layoutY="53.0" prefHeight="297.0" prefWidth="777.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <Label layoutX="127.0" layoutY="59.0" text="SELAMAT DATANG">
+               <font>
+                  <Font size="62.0" />
+               </font>
+            </Label>
+            <Label layoutX="122.0" layoutY="155.0" text="Silahkan Pilih Film yang tersedia di bawah">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="353.0" layoutY="240.0" text="Hello Cinema" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="info_page" layoutY="53.0" prefHeight="297.0" prefWidth="777.0" style="-fx-background-color: lightgrey;" visible="false">
+         <children>
+            <AnchorPane layoutX="203.0" prefHeight="285.0" prefWidth="553.0">
+               <children>
+                  <Button fx:id="pesanbtn" layoutX="413.0" layoutY="239.0" mnemonicParsing="false" onAction="#pesanbtnAction" prefHeight="25.0" prefWidth="126.0" text="Pesan" />
+                  <TextArea fx:id="filmsinopsis" editable="false" layoutX="6.0" layoutY="46.0" prefHeight="186.0" prefWidth="547.0" stylesheets="@style.css" text="Sinopsis" wrapText="true" />
+                  <Label fx:id="title" layoutX="14.0" layoutY="22.0" prefHeight="27.0" prefWidth="175.0" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="bhahaa1" layoutX="21.0" layoutY="238.0" prefHeight="27.0" prefWidth="60.0" text="Harga :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="harga" layoutX="102.0" layoutY="238.0" prefHeight="27.0" prefWidth="126.0" text="Harga">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="bhahaa11" layoutX="218.0" layoutY="238.0" prefHeight="27.0" prefWidth="126.0" text="Kursi Tersedia :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="seat" layoutX="355.0" layoutY="238.0" prefHeight="27.0" prefWidth="60.0" text="22">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <AnchorPane layoutX="11.0" layoutY="28.0" prefHeight="242.0" prefWidth="162.0">
+               <children>
+                  <Text layoutX="57.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMAGE">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Text>
+                  <ImageView fx:id="filmimg" fitHeight="242.0" fitWidth="195.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <AnchorPane prefHeight="53.0" prefWidth="777.0" style="-fx-background-color: black;" stylesheets="@style.css">
+         <children>
+            <Text fill="WHITE" layoutX="32.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Button fx:id="closebtn" layoutX="733.0" layoutY="11.0" mnemonicParsing="false" onAction="#closebtnAction" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: none;" styleClass="close-button" stylesheets="@style.css" />
+            <Button fx:id="minimizebtn" layoutX="692.0" layoutY="11.0" mnemonicParsing="false" onAction="#minimizebtnAction" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: none;" styleClass="minimaze-button" stylesheets="@style.css" />
+            <Button layoutX="109.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoutAction" prefHeight="27.0" prefWidth="80.0" text="Keluar Akun" />
+         </children></AnchorPane>
+      <AnchorPane layoutY="361.0" prefHeight="242.0" prefWidth="777.0" style="-fx-background-color: grey;">
+         <children>
+            <HBox layoutX="27.0" layoutY="47.0" prefHeight="158.0" prefWidth="724.0">
+               <children>
+                  <Button fx:id="Studio1" ellipsisString="" mnemonicParsing="false" onAction="#Studio1Action" prefHeight="173.0" prefWidth="126.0" style="-fx-background-color: none;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fx:id="Studio1Banner" accessibleRole="BUTTON" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/avenger.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Studio2" ellipsisString="" mnemonicParsing="false" onAction="#Studio2Action" prefHeight="173.0" prefWidth="126.0" style="-fx-background-color: none;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fx:id="Studio2Banner" accessibleRole="BUTTON" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/avenger.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="spidermanbtn" ellipsisString="" mnemonicParsing="false" onAction="#Studio3Action" prefHeight="173.0" prefWidth="126.0" style="-fx-background-color: none;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fx:id="Studio3Banner" accessibleRole="BUTTON" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/spiderman.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Studio4" ellipsisString="" mnemonicParsing="false" onAction="#Studio4Action" prefHeight="173.0" prefWidth="126.0" style="-fx-background-color: none;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fx:id="Studio4Banner" accessibleRole="BUTTON" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/spiderman.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Studio5" ellipsisString="" mnemonicParsing="false" onAction="#Studio5Action" prefHeight="173.0" prefWidth="126.0" style="-fx-background-color: none;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fx:id="Studio5Banner" accessibleRole="BUTTON" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/spiderman.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <Label layoutX="48.0" layoutY="9.0" text="FILM TERSEDIA" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="62.0" layoutY="209.0" text="STUDIO 1" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="207.0" layoutY="209.0" text="STUDIO 2" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="351.0" layoutY="209.0" text="STUDIO 3" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="506.0" layoutY="210.0" text="STUDIO 4" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="650.0" layoutY="209.0" text="STUDIO 5" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

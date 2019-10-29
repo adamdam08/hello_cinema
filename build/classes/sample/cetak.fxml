@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="394.0" prefWidth="535.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.cetakController">
+   <children>
+      <AnchorPane prefHeight="64.0" prefWidth="535.0" style="-fx-background-color: black;">
+         <children>
+            <Text fill="WHITE" layoutX="25.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cetak">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Button fx:id="closebtn" layoutX="491.0" layoutY="18.0" mnemonicParsing="false" onAction="#closebtnAction" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: none;" styleClass="close-button" stylesheets="@style.css" />
+            <Button fx:id="minimizebtn" layoutX="450.0" layoutY="16.0" mnemonicParsing="false" onAction="#minimizebtnAction" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: none;" styleClass="minimaze-button" stylesheets="@style.css" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="27.0" layoutY="186.0" prefHeight="30.0" prefWidth="158.0" text="Film                    :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="225.0" prefHeight="31.0" prefWidth="158.0" text="Nama                :">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="t_film" layoutX="208.0" layoutY="186.0" prefHeight="30.0" prefWidth="271.0" text="muehehehe">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="t_nama" layoutX="208.0" layoutY="226.0" prefHeight="30.0" prefWidth="271.0" text="Adam Rahmawan">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="87.0" prefHeight="36.0" prefWidth="362.0" text="CETAK TIKET Home Cinema">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="141.0" prefHeight="30.0" prefWidth="158.0" text="Kode Booking    :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="t_kodebook" layoutX="208.0" layoutY="143.0" prefHeight="30.0" prefWidth="271.0" text="691">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="homebtn" layoutX="27.0" layoutY="329.0" mnemonicParsing="false" onAction="#homebtnAction" prefHeight="36.0" prefWidth="482.0" text="Kembali ke beranda" />
+      <Label layoutX="25.0" layoutY="271.0" prefHeight="31.0" prefWidth="158.0" text="Kursi    :">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="data_kursi" layoutX="206.0" layoutY="272.0" prefHeight="30.0" prefWidth="271.0" text="50000">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="488.0" prefWidth="440.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.pesanController">
+   <children>
+      <AnchorPane prefHeight="64.0" prefWidth="440.0" style="-fx-background-color: black;">
+         <children>
+            <Text fill="WHITE" layoutX="26.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pembayaran">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Button fx:id="closebtn" layoutX="396.0" layoutY="17.0" mnemonicParsing="false" onAction="#closebtnAction" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: none;" styleClass="close-button" stylesheets="@style.css" />
+            <Button fx:id="minimizebtn" layoutX="355.0" layoutY="15.0" mnemonicParsing="false" onAction="#minimizebtnAction" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: none;" styleClass="minimaze-button" stylesheets="@style.css" />
+         </children>
+      </AnchorPane>
+      <TextField fx:id="filmid" editable="false" layoutX="28.0" layoutY="129.0" prefHeight="25.0" prefWidth="390.0" />
+      <Label layoutX="28.0" layoutY="85.0" text="Film">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <TextField fx:id="nama" layoutX="28.0" layoutY="219.0" prefHeight="25.0" prefWidth="390.0" />
+      <Label layoutX="28.0" layoutY="175.0" text="Nama">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Button layoutX="342.0" layoutY="434.0" mnemonicParsing="false" onAction="#cetakAction" prefHeight="27.0" prefWidth="82.0" text="CHECKOUT" />
+      <Button fx:id="back" layoutX="249.0" layoutY="435.0" mnemonicParsing="false" onAction="#b_back" prefHeight="27.0" prefWidth="82.0" text="KEMBALI" />
+      <Label layoutX="28.0" layoutY="264.0" text="Jumlah Kursi">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="total_harga" editable="false" layoutX="28.0" layoutY="389.0" prefHeight="25.0" prefWidth="390.0" />
+      <Label layoutX="28.0" layoutY="345.0" text="Harga per kursi">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="jumlah_seat" layoutX="25.0" layoutY="308.0" prefHeight="25.0" prefWidth="390.0" />
+   </children>
+</AnchorPane>

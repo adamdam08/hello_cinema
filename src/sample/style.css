@@ -1,0 +1,25 @@
+.text-input {
+	-fx-text-fill : #444;
+}
+.close-button {
+	-fx-background-image: url('../img/icons8_multiply_64px.png');
+	-fx-background-position: center;
+	-fx-background-size: 30px 30px;
+}
+.minimaze-button {
+	-fx-background-image: url('../img/icons8_minus_24px.png');
+	-fx-background-position: center;
+	-fx-background-size: 30px 30px;
+	
+}
+.text-area {
+-fx-background-color: lightgrey;
+	-fx-border-color: none;
+    -fx-font-size: 15;
+    -fx-text-fill: black;
+}
+.text-area .content {
+    -fx-background-color: lightgrey;
+	-fx-border-color: none;
+	
+}
