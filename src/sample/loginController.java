@@ -36,7 +36,8 @@ public class loginController extends commonController{
             errorLabel.setVisible(true);
         }
     }
-    
+//    exception handling
+//    method mutator
     private boolean validasi() {
         boolean key = false;
         String email = emailField.getText();
@@ -48,8 +49,7 @@ public class loginController extends commonController{
         con = DB.conn;
         stat = DB.stmt;
         
-        try {
-            
+        try {     
             sql = "SELECT * FROM admin WHERE username='"+email+"' AND password='"+password+"'";
             rs = stat.executeQuery(sql);
             if(rs.next()){

@@ -42,7 +42,7 @@ public class dataController extends commonController implements Initializable{
         
         @Override
         public void initialize(URL location, ResourceBundle resources) { }
-
+//        method accessor
         public int setKey(int key) {
             return this.key = key ;
         }

@@ -6,23 +6,28 @@
 package sample;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.Arrays;
+import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
+import java.util.Scanner;
 /**
  *
  * @author GL522VXK
  */
-public class kursiController extends pesanController{
+public class kursiController extends pesanController implements Initializable{
+    
     @FXML
     private ImageView a1,a2,a3,a4,a5,a6,a7,a8,a9;
     @FXML
@@ -35,10 +40,22 @@ public class kursiController extends pesanController{
     private ImageView e1,e2,e3,e4,e5,e6,e7,e8,e9;
     @FXML
     private Label count_seat,data_kursi;
+    
     int x = 0;
     public String a[] = new String[45];
-    int jumlah = 0;
+    public int jumlah = 0;
+//    public String a_save[] = new String[jumlah];
+//    public int xz = 0;
+
     
+    boolean a1_stat = false,a2_stat = false ,a3_stat = false,a4_stat = false,a5_stat = false,a6_stat = false,a7_stat = false,a8_stat = false,a9_stat = false;
+    boolean b1_stat = false,b2_stat = false,b3_stat = false,b4_stat = false,b5_stat = false,b6_stat = false,b7_stat = false,b8_stat = false,b9_stat = false;
+    boolean c1_stat = false,c2_stat = false,c3_stat = false,c4_stat = false,c5_stat = false,c6_stat = false,c7_stat = false,c8_stat = false,c9_stat = false;
+    boolean d1_stat = false,d2_stat = false,d3_stat = false,d4_stat = false,d5_stat = false,d6_stat = false,d7_stat = false,d8_stat = false,d9_stat = false;
+    boolean e1_stat = false,e2_stat = false,e3_stat = false,e4_stat = false,e5_stat = false,e6_stat = false,e7_stat = false,e8_stat = false,e9_stat = false;
+    
+    String seat_true = "..\\img\\chairRed.png";
+    String seat_false = "..\\img\\chairBlack.png";
     
     @Override
     public void sendData(int a) {
@@ -63,6 +80,14 @@ public class kursiController extends pesanController{
         }
     }
     
+    public void savedata(int jumlah) {   
+//       do{
+//            a_save[xz] = a[xz];
+//            xz++;
+//        }while(xz < jumlah);
+//       System.out.println("Savedata : "+Arrays.toString(a_save));
+    }
+    
     @FXML
     private void finishAction(ActionEvent event) {
         Node source1 = (Node) event.getSource();
@@ -76,83 +101,137 @@ public class kursiController extends pesanController{
     
     @FXML
     private void a1Action(ActionEvent event) {
-        a[x] = "a1";
-        x += 1;
-        jumlah += 1;
-        showData();
-        showJumlah();
+        if(a1_stat == false){
+            a1.setImage(new Image(String.valueOf(this.getClass().getResource(seat_true))));  
+            a[x] = "a1";
+            x += 1;
+            jumlah += 1;
+            a1_stat = true;
+        }else{
+            a1.setImage(new Image(String.valueOf(this.getClass().getResource(seat_false))));
+            a1_stat = false;
+            jumlah -= 1;
+        }
     }
     
     @FXML
     private void a2Action(ActionEvent event) {
-        a[x] = "a2";
-        x += 1;
-        jumlah += 1;
-        showData();
-        showJumlah();
+        if(a2_stat == false){
+            a2.setImage(new Image(String.valueOf(this.getClass().getResource(seat_true))));  
+            a[x] = "a2";
+            x += 1;
+            jumlah += 1;
+            a2_stat = true;
+        }else{
+            a2.setImage(new Image(String.valueOf(this.getClass().getResource(seat_false))));
+            a2_stat = false;
+            jumlah -= 1;
+        }
     }
     
     @FXML
     private void a3Action(ActionEvent event) {
-        a[x] = "a3";
-        x += 1;
-        jumlah += 1;
-        showData();
-        showJumlah();
+        if(a3_stat == false){
+            a3.setImage(new Image(String.valueOf(this.getClass().getResource(seat_true))));  
+            a[x] = "a3";
+            x += 1;
+            jumlah += 1;
+            a3_stat = true;
+        }else{
+            a3.setImage(new Image(String.valueOf(this.getClass().getResource(seat_false))));
+            a3_stat = false;
+            jumlah -= 1;
+        }
     }
     
     @FXML
     private void a4Action(ActionEvent event) {
-        a[x] = "a4";
-        x += 1;
-        jumlah += 1;
-        showData();
-        showJumlah();
+        if(a4_stat == false){
+            a4.setImage(new Image(String.valueOf(this.getClass().getResource(seat_true))));  
+            a[x] = "a4";
+            x += 1;
+            jumlah += 1;
+            a4_stat = true;
+        }else{
+            a4.setImage(new Image(String.valueOf(this.getClass().getResource(seat_false))));
+            a4_stat = false;
+            jumlah -= 1;
+        }
     }
     
     @FXML
     private void a5Action(ActionEvent event) {
-        a[x] = "a5";
-        x += 1;
-        jumlah += 1;
-        showData();
-        showJumlah();
+        if(a5_stat == false){
+            a5.setImage(new Image(String.valueOf(this.getClass().getResource(seat_true))));  
+            a[x] = "a5";
+            x += 1;
+            jumlah += 1;
+            a5_stat = true;
+        }else{
+            a5.setImage(new Image(String.valueOf(this.getClass().getResource(seat_false))));
+            a5_stat = false;
+            jumlah -= 1;
+        }
     }
     
     @FXML
     private void a6Action(ActionEvent event) {
-        a[x] = "a6";
-        x++;
-        jumlah += 1;
-        showData();
-        showJumlah();
+        if(a6_stat == false){
+            a6.setImage(new Image(String.valueOf(this.getClass().getResource(seat_true))));  
+            a[x] = "a6";
+            x += 1;
+            jumlah += 1;
+            a6_stat = true;
+        }else{
+            a1.setImage(new Image(String.valueOf(this.getClass().getResource(seat_false))));
+            a1_stat = false;
+            jumlah -= 1;
+        }
     }
     
     @FXML
     private void a7Action(ActionEvent event) {
-        a[x] = "a7";
-        x++;
-        jumlah += 1;
-        showData();
-        showJumlah();
+        if(a7_stat == false){
+            a7.setImage(new Image(String.valueOf(this.getClass().getResource(seat_true))));  
+            a[x] = "a7";
+            x += 1;
+            jumlah += 1;
+            a7_stat = true;
+        }else{
+            a7.setImage(new Image(String.valueOf(this.getClass().getResource(seat_false))));
+            a7_stat = false;
+            jumlah -= 1;
+        }
     }
     
     @FXML
     private void a8Action(ActionEvent event) {
-        a[x] = "a8";
-        x++;
-        jumlah += 1;
-        showData();
-        showJumlah();
+        if(a8_stat == false){
+            a8.setImage(new Image(String.valueOf(this.getClass().getResource(seat_true))));  
+            a[x] = "a8";
+            x += 1;
+            jumlah += 1;
+            a8_stat = true;
+        }else{
+            a8.setImage(new Image(String.valueOf(this.getClass().getResource(seat_false))));
+            a8_stat = false;
+            jumlah -= 1;
+        }
     }
     
     @FXML
     private void a9Action(ActionEvent event) {
-        a[x] = "a9";
-        x++;
-        jumlah += 1;
-        showData();
-        showJumlah();
+        if(a9_stat == false){
+            a9.setImage(new Image(String.valueOf(this.getClass().getResource(seat_true))));  
+            a[x] = "a9";
+            x += 1;
+            jumlah += 1;
+            a9_stat = true;
+        }else{
+            a9.setImage(new Image(String.valueOf(this.getClass().getResource(seat_false))));
+            a9_stat = false;
+            jumlah -= 1;
+        }
     }
     
     @FXML
@@ -489,9 +568,9 @@ public class kursiController extends pesanController{
     
     private void changeScene() {
         try {
+            savedata(jumlah);
             FXMLLoader loader = new FXMLLoader(getClass().getResource("pesan.fxml"));
             Parent root = loader.load();
-
             pesanController scnd = loader.getController();
 //          Pass whatever data you want. You can have multiple method calls here
             scnd.SendseatData(jumlah,key,a);

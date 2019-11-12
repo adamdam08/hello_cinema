@@ -55,7 +55,7 @@
          </font>
       </Label>
       <Button fx:id="homebtn" layoutX="27.0" layoutY="329.0" mnemonicParsing="false" onAction="#homebtnAction" prefHeight="36.0" prefWidth="482.0" text="Kembali ke beranda" />
-      <Label layoutX="25.0" layoutY="271.0" prefHeight="31.0" prefWidth="158.0" text="Kursi    :">
+      <Label layoutX="25.0" layoutY="271.0" prefHeight="31.0" prefWidth="158.0" text="Kursi                  :">
          <font>
             <Font size="21.0" />
          </font>
